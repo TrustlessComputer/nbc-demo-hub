@@ -10,7 +10,7 @@ export default function NewestUsers({
 }) {
   // Newest users list
     const { data, lastChecked } = frequencyGetData(
-        API_URL +"/player-share/tokens?network=nos&page=1&limit=50&key_type=1&side=0&followers=0,200000&price_usd=0,1000&sort_col=k.created_at&sort_type=0&holder=0&price=0,1000",
+        API_URL +"/player-share/tokensv1?network=nos&page=1&limit=50&key_type=1&side=0&followers=0,200000&price_usd=0,1000&sort_col=k.created_at&sort_type=0&holder=0&price=0,1000",
         20 * 1000
     );
 
