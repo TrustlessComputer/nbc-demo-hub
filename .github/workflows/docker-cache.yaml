@@ -10,6 +10,6 @@ jobs:
     uses: TrustlessComputer/tc-github-action-templates/.github/workflows/docker-build-cache.yaml@main
     with:
       DOCKER_IMAGE_NAME: nbc-demo-hub
+      DOCKERFILE_NAME: ./frontend/Dockerfile.cache
       DOCKER_CONTEXT: ./frontend
-      DOCKERFILE_NAME: Dockerfile.cache
 

@@ -10,7 +10,7 @@ jobs:
     uses: TrustlessComputer/tc-github-action-templates/.github/workflows/docker-build-and-push.yaml@main
     with:
       DOCKER_IMAGE_NAME: nbc-demo-hub
-      DOCKERFILE_NAME: Dockerfile
+      DOCKERFILE_NAME: ./frontend/Dockerfile
       DOCKER_CONTEXT: ./frontend
       CONCURRENCY_GROUP: docker_build_develop
       RUNNER_TAG: ubuntu-latest
