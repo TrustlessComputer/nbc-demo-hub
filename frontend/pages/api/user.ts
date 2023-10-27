@@ -11,16 +11,12 @@ export async function getStateUser(address: string): Promise<StateUser> {
   const lowerAddress: string = address.toLowerCase();
 
   // Check for cache
-
-
-  //const { twitterPfpUrl: image, twitterUsername: username } ={"",""}
-
-
   // Setup user
   const user: StateUser = {
     address: lowerAddress,
-    image,
-    username,
+    username: "",
+    image: "",
+    tokenaddress: "",
   };
 
   // Return data

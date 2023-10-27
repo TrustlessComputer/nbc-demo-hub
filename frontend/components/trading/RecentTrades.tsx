@@ -2,15 +2,14 @@ import Card from "components/Card";
 import { renderTimeSince } from "utils/time";
 import TradeTable from "components/TradeTable";
 import {frequencyGetData} from "utils/usePollData";
-import type { TradeWithTwitterUser } from "pages/api/stats/trades";
 import { useState} from "react";
 import {UserInfo} from "../User";
 import {API_URL } from "utils";
 
 export default function RecentTrades({
-  trades: ssrTrades,
+  trades: any,
 }: {
-  trades: TradeWithTwitterUser[];
+  trades: any[];
 }) {
     // Loading state
     const [loading, setLoading] = useState<boolean>(false);

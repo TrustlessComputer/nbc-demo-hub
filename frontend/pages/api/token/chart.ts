@@ -40,10 +40,9 @@ export default async function handler(
     let processed: CachedData;
 
     let { data } = await axios.get( API_URL +"/player-share/chart/data?day=15&address="+address)
-    if (data&&data["result"]!="") {
+
       // Process trades
        processed = processTrades(data["result"],address);
-    }
 
     // Return new data
     return res.status(200).json(processed.chart);

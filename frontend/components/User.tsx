@@ -88,6 +88,7 @@ export default function User({
             className="mr-2"
             onClick={() =>
               toggleFavorite({
+                  tokenaddress:"",
                 address: data.address.toLowerCase(),
                 image,
                 username,

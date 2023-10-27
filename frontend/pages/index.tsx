@@ -12,12 +12,6 @@ import RecentTrades from "components/trading/RecentTrades";
 // import RealizedProfit from "components/trading/ProfitableUsers";
 import RecentTokenTrades from "components/trading/RecentTokenTrades";
 
-// API
-//import { getLeaderboardUsers } from "./api/stats/leaderboard";
-// import {
-//   type RealizedProfitUser,
-//   getRealizedProfits,
-// } from "./api/stats/realized";
 import type { UserInfo } from "components/User";
 import type { NextPageContext } from "next";
 import { getStateUser } from "./api/user";
@@ -36,7 +30,7 @@ export default function Home({
   user,
 }: {
   newestUsers: UserInfo[];
-  latestTrades: TradeWithTwitterUser[];
+  latestTrades: any[];
   leaderboardUsers: UserInfo[];
   // realizedProfit: RealizedProfitUser[];
   user: StateUser;
