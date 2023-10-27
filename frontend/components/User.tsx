@@ -52,8 +52,17 @@ export default function User({
   return (
     <div className="flex flex-col border rounded-lg bg-white">
       {/* Top section */}
-      <div className="p-2 flex flex-row items-center justify-between w-full">
+      <div onClick={() =>
+          setUser({
+              address: data.id,
+              username: data.twitterUsername,
+              image: data.twitterPfpUrl,
+              tokenaddress:data.address,
+          })
+      }
+           className="p-2 flex flex-row items-center justify-between w-full">
         {/* Top left (image, handle, address) */}
+        
         <div className="flex items-center">
           <img
             src={image}
@@ -65,15 +74,14 @@ export default function User({
 
           <div className="flex text-xs flex-col pl-2 [&>a:hover]:opacity-70">
             {/* Username */}
-            <a href={usernameLink} target="_blank" rel="noopener noreferrer">
+            <a href="javascript:;"  rel="noopener noreferrer">
               {username}
             </a>
 
             {/* Address */}
             <a
-              href={addressLink}
+                href="javascript:"
               className="text-zinc-400"
-              target="_blank"
               rel="noopener noreferrer"
             >
               {address}
@@ -103,7 +111,7 @@ export default function User({
           </button>
 
           {/* Trade button */}
-          <Button
+          <Button style={{"height":"40px"}}
             onClick={() =>
               setUser({
                 address: data.id,
