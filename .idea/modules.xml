@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/nbc-DemoHub.iml" filepath="$PROJECT_DIR$/.idea/nbc-DemoHub.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/nbc-demo-hub.iml" filepath="$PROJECT_DIR$/.idea/nbc-demo-hub.iml" />
     </modules>
   </component>
 </project>

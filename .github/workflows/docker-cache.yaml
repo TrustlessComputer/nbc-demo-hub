@@ -1,0 +1,15 @@
+name: Docker cache build
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  docker-cache:
+    uses: TrustlessComputer/tc-github-action-templates/.github/workflows/docker-build-cache.yaml@main
+    with:
+      DOCKER_IMAGE_NAME: nbc-demo-hub
+      DOCKER_CONTEXT: ./frontend
+      DOCKERFILE_NAME: Dockerfile.cache
+

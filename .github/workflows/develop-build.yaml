@@ -1,0 +1,18 @@
+name: Docker develop build
+
+on:
+  push:
+    branches:
+      - 'develop'
+
+jobs:
+  build-nbc-demo-hub-develop:
+    uses: TrustlessComputer/tc-github-action-templates/.github/workflows/docker-build-and-push.yaml@main
+    with:
+      DOCKER_IMAGE_NAME: nbc-demo-hub
+      DOCKERFILE_NAME: Dockerfile
+      DOCKER_CONTEXT: ./frontend
+      CONCURRENCY_GROUP: docker_build_develop
+      RUNNER_TAG: ubuntu-latest
+    secrets:
+      GCLOUD_DEV_SERVICE_ACCOUNT_JSON: ${{ secrets.GCLOUD_DEV_SERVICE_ACCOUNT_JSON }}
