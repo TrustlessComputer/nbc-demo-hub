@@ -61,7 +61,7 @@ const wagmiConfig = createConfig({
   publicClient,
 });
 
-export default function FriendMEX({ Component, pageProps }: AppProps) {
+export default function NBC({ Component, pageProps }: AppProps) {
   return (
     // Wrap in RainbowKit providers
     <WagmiConfig config={wagmiConfig}>

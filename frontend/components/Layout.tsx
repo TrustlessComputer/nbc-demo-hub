@@ -28,11 +28,11 @@ export default function Layout({
 
 function Meta() {
   const meta = {
-    url: "https://friendmex.com",
-    image: "https://friendmex.com/meta.png",
-    title: "FriendMEX | Advanced friend.tech trading platform",
+    url: "https://nbc.newbitcoindex.com",
+    image: "https://nbc.newbitcoindex.com/meta.png",
+    title: "NBC | Advanced friend.tech trading platform on Bitcoin",
     description:
-      "FriendMEX is THE pro trading platform for friend.tech users. No invite code necessary, real-time statistics, analytics, and more.",
+      "NBC is THE pro trading platform for users. No invite code necessary, real-time statistics, analytics, and more.",
   };
 
   return (
@@ -43,7 +43,7 @@ function Meta() {
       <meta name="description" content={meta.description} />
 
       {/* Favicon */}
-      <link rel="icon" href="https://friendmex.com/favicon.ico" sizes="any" />
+      <link rel="icon" href="https://nbc.newbitcoindex.com/favicon.ico" sizes="any" />
 
       {/* OG + Facebook */}
       <meta property="og:type" content="website" />
