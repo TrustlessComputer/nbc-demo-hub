@@ -78,7 +78,7 @@ export default function User({
             {/* Username */}
             <a
               href="javascript:;"
-              style={{ "max-width": "110px" }}
+              style={{ maxWidth: "110px" }}
               rel="noopener noreferrer"
             >
               {username}
