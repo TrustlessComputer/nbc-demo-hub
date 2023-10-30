@@ -37,14 +37,14 @@ export default function User({
   const image: string = data.twitterPfpUrl ?? "/rasters/default.png";
   const alt: string = data.twitterUsername
     ? `${data.twitterUsername} profile picture`
-    : `${data.address} profile picture`;
+    : `${data.id} profile picture`;
 
   // Username
-  const address: string = truncateAddress(data.address, 6);
+  const address: string = truncateAddress(data.id, 6);
   const username: string = data.twitterUsername
     ? `${data.twitterUsername}`
     : address;
-  const addressLink: string = `https://explorer.l2.trustless.computer/address/${data.address}`;
+  const addressLink: string = `https://explorer.l2.trustless.computer/address/${data.id}`;
   const usernameLink: string = data.twitterUsername
     ? `https://twitter.com/${data.twitterUsername}`
     : addressLink;
@@ -103,13 +103,13 @@ export default function User({
             onClick={() =>
               toggleFavorite({
                 tokenaddress: "",
-                address: data.address.toLowerCase(),
+                address: data.id.toLowerCase(),
                 image,
                 username,
               })
             }
           >
-            {favorites[data.address.toLowerCase()] ? (
+            {favorites[data.id.toLowerCase()] ? (
               <StarFilledIcon className="stroke-amber-400 text-amber-400" />
             ) : (
               <StarIcon className="stroke-zinc-200" />
@@ -127,7 +127,7 @@ export default function User({
                 tokenaddress: data.address,
               })
             }
-            disabled={user.address === data.address}
+            disabled={user.address === data.id}
             className="text-xs h-7 px-2 py-0 bg-buy hover:bg-buy hover:opacity-70 transition-opacity"
           >
             {isMinimal ? (

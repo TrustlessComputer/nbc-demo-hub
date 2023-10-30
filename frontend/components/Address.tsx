@@ -19,7 +19,7 @@ export default function Address({
   // Conditional renders
   const name: string | null | undefined =
     username && username.length > 20 ? username?.slice(0, 20) : username;
-  const user: string = username ? `@${name}` : truncateAddress(address, 6);
+  const user: string = username ? `${name}` : truncateAddress(address, 6);
 
   return (
     <Button
