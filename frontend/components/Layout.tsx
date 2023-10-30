@@ -30,7 +30,7 @@ function Meta() {
   const meta = {
     url: "https://nbc.newbitcoindex.com",
     image: "https://nbc.newbitcoindex.com/meta.png",
-    title: "NBC | Advanced friend.tech trading platform on Bitcoin",
+    title: "NBC | Advanced NBC trading platform on Bitcoin",
     description:
       "NBC is THE pro trading platform for users. No invite code necessary, real-time statistics, analytics, and more.",
   };
@@ -43,7 +43,7 @@ function Meta() {
       <meta name="description" content={meta.description} />
 
       {/* Favicon */}
-      <link rel="icon" href="https://nbc.newbitcoindex.com/favicon.ico" sizes="any" />
+      <link rel="icon" href="" sizes="any" />
 
       {/* OG + Facebook */}
       <meta property="og:type" content="website" />
