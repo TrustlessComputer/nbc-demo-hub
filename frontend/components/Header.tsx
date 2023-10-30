@@ -22,7 +22,28 @@ export default function Header() {
   return (
     <div className="sticky top-0 z-50">
       {/* Sub header */}
-
+      <div className="bg-black border-b border-zinc-800 flex items-center justify-center py-0.5">
+        <span className="text-xs text-zinc-400">
+          An{" "}
+          <a
+            href="https://github.com/TrustlessComputer/nbc-demo-hub"
+            target="_blank"
+            rel="noopen noreferrer"
+            className="hover:opacity-70 transition-opacity underline"
+          >
+            open-source
+          </a>{" "}
+          project of NBC &nbsp;
+          <a
+            href="https://alpha-3.gitbook.io/nbc-backend-call/"
+            target="_blank"
+            rel="noopen noreferrer"
+            className="hover:opacity-70 transition-opacity underline"
+          >
+             view technical doc here
+          </a>
+        </span>
+      </div>
       {/* Main header */}
       <div className="flex justify-between h-14 px-4 items-center bg-black">
         <div>
