@@ -1,6 +1,6 @@
 import { parseUSD } from "utils/usd";
 import { Button } from "./ui/button";
-import { truncateAddress} from "utils";
+import { truncateAddress } from "utils";
 import { Global, Currency, StateUser } from "state/global";
 import { StarFilledIcon, StarIcon } from "@radix-ui/react-icons";
 
@@ -9,13 +9,13 @@ import { StarFilledIcon, StarIcon } from "@radix-ui/react-icons";
  */
 
 export type UserInfo = {
-    id: string;
-    twitterUsername:string;
-    address: string;
-    twitterPfpUrl:string;
-    supply:number;
-    price:number,
-    usdPrice:number;
+  id: string;
+  twitterUsername: string;
+  address: string;
+  twitterPfpUrl: string;
+  supply: number;
+  price: number;
+  usdPrice: number;
 };
 export default function User({
   data,
@@ -24,45 +24,47 @@ export default function User({
   data: UserInfo;
   isMinimal?: boolean;
 }) {
-
-
-
-  const { user, setUser, currency, eth, favorites, toggleFavorite } =
-    Global.useContainer();
+  const {
+    user,
+    setUser,
+    currency,
+    eth,
+    favorites,
+    toggleFavorite,
+  } = Global.useContainer();
 
   // Profile image
   const image: string = data.twitterPfpUrl ?? "/rasters/default.png";
   const alt: string = data.twitterUsername
-    ? `@${data.twitterUsername} profile picture`
+    ? `${data.twitterUsername} profile picture`
     : `${data.address} profile picture`;
-
-
 
   // Username
   const address: string = truncateAddress(data.address, 6);
   const username: string = data.twitterUsername
-    ? `@${data.twitterUsername}`
+    ? `${data.twitterUsername}`
     : address;
   const addressLink: string = `https://explorer.l2.trustless.computer/address/${data.address}`;
   const usernameLink: string = data.twitterUsername
     ? `https://twitter.com/${data.twitterUsername}`
     : addressLink;
 
-
   return (
     <div className="flex flex-col border rounded-lg bg-white">
       {/* Top section */}
-      <div onClick={() =>
+      <div
+        onClick={() =>
           setUser({
-              address: data.id,
-              username: data.twitterUsername,
-              image: data.twitterPfpUrl,
-              tokenaddress:data.address,
+            address: data.id,
+            username: data.twitterUsername,
+            image: data.twitterPfpUrl,
+            tokenaddress: data.address,
           })
-      }
-           className="p-2 flex flex-row items-center justify-between w-full">
+        }
+        className="p-2 flex flex-row items-center justify-between w-full"
+      >
         {/* Top left (image, handle, address) */}
-        
+
         <div className="flex items-center">
           <img
             src={image}
@@ -74,13 +76,17 @@ export default function User({
 
           <div className="flex text-xs flex-col pl-2 [&>a:hover]:opacity-70">
             {/* Username */}
-            <a href="javascript:;"  rel="noopener noreferrer">
+            <a
+              href="javascript:;"
+              style={{ "max-width": "110px" }}
+              rel="noopener noreferrer"
+            >
               {username}
             </a>
 
             {/* Address */}
             <a
-                href="javascript:"
+              href="javascript:"
               className="text-zinc-400"
               rel="noopener noreferrer"
             >
@@ -96,7 +102,7 @@ export default function User({
             className="mr-2"
             onClick={() =>
               toggleFavorite({
-                  tokenaddress:"",
+                tokenaddress: "",
                 address: data.address.toLowerCase(),
                 image,
                 username,
@@ -111,13 +117,14 @@ export default function User({
           </button>
 
           {/* Trade button */}
-          <Button style={{"height":"40px"}}
+          <Button
+            style={{ height: "40px" }}
             onClick={() =>
               setUser({
                 address: data.id,
                 username: data.twitterUsername,
                 image: data.twitterPfpUrl,
-                  tokenaddress:data.address,
+                tokenaddress: data.address,
               })
             }
             disabled={user.address === data.address}
@@ -128,7 +135,10 @@ export default function User({
             ) : currency === Currency.USD ? (
               <span></span>
             ) : (
-              <span> {(Number(data.price)).toFixed(5)} BTC <br/>${(Number(data.usdPrice)).toFixed(2)}
+              <span>
+                {" "}
+                {Number(data.price).toFixed(5)} BTC <br />$
+                {Number(data.usdPrice).toFixed(2)}
               </span>
             )}
           </Button>
@@ -141,7 +151,6 @@ export default function User({
           <span>
             {data.supply.toString()} key{Number(data.supply) == 1 ? "" : "s"}
           </span>
-
         </div>
       )}
     </div>

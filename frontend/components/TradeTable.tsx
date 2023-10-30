@@ -58,14 +58,14 @@ export default function TradeTable({
               <TableCell>
                 <Address
                   address={trade.user.address}
-                  username={trade.user.twitter_username}
+                  username={trade.user.twitter_name}
                   image={trade.user.twitter_avatar}
                 />
               </TableCell>
               <TableCell>
                 <Address
                   address={trade.player.address}
-                  username={trade.player.twitter_username}
+                  username={trade.player.twitter_name}
                   image={trade.player.twitter_avatar}
                 />
               </TableCell>

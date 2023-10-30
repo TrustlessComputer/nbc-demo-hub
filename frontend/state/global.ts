@@ -32,9 +32,8 @@ function useGlobal(initialState: StateUser = constants.PUNK3700) {
 
   // On page load
   useEffect(() => {
-
     // Load favorites from local storage
-    const localFavorites = localStorage.getItem("friendmex_favorites");
+    const localFavorites = localStorage.getItem("nbc_favorites");
     if (localFavorites) setFavorites(JSON.parse(localFavorites));
   }, []);
 
@@ -51,7 +50,7 @@ function useGlobal(initialState: StateUser = constants.PUNK3700) {
   const addFavorite = (user: StateUser) => {
     const newFavorites = { ...favorites, [user.address]: user };
     setFavorites({ ...newFavorites });
-    localStorage.setItem("friendmex_favorites", JSON.stringify(newFavorites));
+    localStorage.setItem("nbc_favorites", JSON.stringify(newFavorites));
   };
 
   /**
@@ -61,7 +60,7 @@ function useGlobal(initialState: StateUser = constants.PUNK3700) {
   const removeFavorite = (user: StateUser) => {
     const { [user.address]: _, ...rest } = favorites;
     setFavorites({ ...rest });
-    localStorage.setItem("friendmex_favorites", JSON.stringify(rest));
+    localStorage.setItem("nbc_favorites", JSON.stringify(rest));
   };
 
   /**

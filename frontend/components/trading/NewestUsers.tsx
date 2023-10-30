@@ -19,7 +19,7 @@ export default function NewestUsers({
         for (const user of data.result) {
             listResults.push({
                 id: user["owner"],
-                twitterUsername: user["user_twitter_username"],
+                twitterUsername: user["user_twitter_name"],
                 address: user["address"],
                 twitterPfpUrl: user["user_twitter_avatar"],
                 supply: user["total_supply_number"],
