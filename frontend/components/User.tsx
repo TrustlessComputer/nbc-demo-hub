@@ -124,7 +124,7 @@ export default function User({
                 address: data.id,
                 username: data.twitterUsername,
                 image: data.twitterPfpUrl,
-                tokenaddress: data.address,
+                tokenaddress: "",
               })
             }
             disabled={user.address === data.id}
