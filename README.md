@@ -1,5 +1,5 @@
 
--Alpha Trading interface
+-NBC Application Example
 
 ## License
 
