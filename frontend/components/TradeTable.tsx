@@ -39,7 +39,7 @@ export default function TradeTable({
         <TableRow>
           <TableHead>Time </TableHead>
           <TableHead>From</TableHead>
-          <TableHead>Player</TableHead>
+          <TableHead>User</TableHead>
           <TableHead>Keys Amount</TableHead>
           <TableHead>Price</TableHead>
           <TableHead>Total</TableHead>
