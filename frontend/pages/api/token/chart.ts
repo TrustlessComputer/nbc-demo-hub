@@ -39,7 +39,7 @@ export default async function handler(
 
     let processed: CachedData;
 
-    let { data } = await axios.get( API_URL +"/player-share/chart/data?day=15&address="+address)
+    let { data } = await axios.get( API_URL +"/nbc-keys/chart/data?day=15&address="+address)
 
       // Process trades
        processed = processTrades(data["result"],address);
