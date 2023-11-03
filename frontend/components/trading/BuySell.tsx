@@ -20,7 +20,7 @@ export default function BuySell() {
     async function execute() {
       if(user.tokenaddress=="" || user.tokenaddress===undefined)
       {
-        let { data } = await axios.get(API_URL +"/player-share/profile?network=nos&address="+user.address);
+        let { data } = await axios.get(API_URL +"/nbc-keys/profile?network=nos&address="+user.address);
         if (data&&data["result"]["token_address"]!="")
         {
           setUser({ address:user.address, username:user.username, image:user.image,tokenaddress:data["result"]["token_address"] })

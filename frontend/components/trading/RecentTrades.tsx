@@ -18,7 +18,7 @@ export default function RecentTrades({
 
     // Backend data (leaderboard)
     const { data, lastChecked } = frequencyGetData(
-        API_URL +"/player-share/activities?network=nos&address=&page=1&limit=50",
+        API_URL +"/nbc-keys/activities?network=nos&address=&page=1&limit=50",
         20 * 1000
     );
 

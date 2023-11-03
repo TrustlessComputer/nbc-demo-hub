@@ -13,7 +13,7 @@ export default function RecentTokenTrades() {
 
 
   const { data, lastChecked,loading } = frequencyGetData(
-      API_URL +"/player-share/holder/activities?page=1&limit=200&network=nos&address="+user.address,
+      API_URL +"/nbc-keys/holder/activities?page=1&limit=200&network=nos&address="+user.address,
       20 * 1000
   );
 
