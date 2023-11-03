@@ -21,7 +21,7 @@ function useSearch(search: string) {
       // Toggle loading
       setLoading(true);
 
-      const { data } = await axios.get(API_URL +"/player-share/tokens?network=nos&page=1&limit=10&key_type=1&followers=0,200000&price=0,50&red_flags=0,6.9&sort_col=buy_price&sort_type=0&holder=0&re_flags=0,10&search="+search);
+      const { data } = await axios.get(API_URL +"/nbc-keys/tokens?network=nos&page=1&limit=10&key_type=1&followers=0,200000&price=0,50&red_flags=0,6.9&sort_col=buy_price&sort_type=0&holder=0&re_flags=0,10&search="+search);
      let listResults = []
       for (const user of data.result) {
         listResults.push({ id: user["owner"],

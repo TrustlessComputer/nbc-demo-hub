@@ -40,7 +40,7 @@ export function getPrice(supply: number, amount: number): number {
   return summation / 16000;
 }
 
-export const API_URL = "https://alpha-api.newbitcoincity.com/api";
+export const API_URL = "https://api.newbitcoincity.com/api";
 export const FACTORY_CONTRACT_ADDRESS = "0x9b727dcaC7b331f95786D3b01fA79191Ab527DA3";
 export const BTC_CONTRACT_ADDRESS = "0x111808AbE352c8003e0eFfcc04998EaB26Cebe3c";
 export const TOKEN_ABI = [
