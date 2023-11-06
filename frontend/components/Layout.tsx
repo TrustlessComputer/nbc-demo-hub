@@ -29,7 +29,7 @@ export default function Layout({
 function Meta() {
   const meta = {
     url: "https://nbc.newbitcoindex.com",
-    image: "https://nbc.newbitcoindex.com/meta.png",
+    image: "https://cdn.newbitcoincity.com/nbc/images/alpha_metadata_06.png",
     title: "NBC | Advanced NBC trading platform on Bitcoin",
     description:
       "NBC is THE pro trading platform for users. No invite code necessary, real-time statistics, analytics, and more.",
@@ -50,6 +50,7 @@ function Meta() {
       <meta property="og:url" content={meta.url} />
       <meta property="og:title" content={meta.title} />
       <meta property="og:description" content={meta.description} />
+      <meta property="og:image" content={meta.image} />
 
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
